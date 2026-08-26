@@ -1,0 +1,27 @@
+# DESMONTA
+
+> Empresa técnica especializada em reclassificação de danos e perícia de identificação veicular.
+
+## Informações públicas
+
+- Site institucional em português do Brasil.
+- Serviços: reclassificação de danos, perícia de identificação veicular e assessoria técnico-jurídica.
+- Diferencial: atuação integrada de engenheiros habilitados e advogados especializados em direito de trânsito.
+- A reclassificação depende de avaliação individual, fundamento técnico, documentação e decisão dos órgãos competentes.
+- A DESMONTA não garante resultados antes da análise do caso.
+- Nesta fase não há cadastro, login, consulta veicular, integração com SENATRAN ou área autenticada.
+- Telefone e WhatsApp: +55 34 9779-0930
+- E-mail: empresadesmontareclassificacao@gmail.com
+- Endereço: Rua Major Gote, 1022, sala 304, Patos de Minas
+- CNPJ: 41.818.421/0001-01
+- Instagram oficial: https://www.instagram.com/des_monta/
+
+## Páginas
+
+- / — apresentação institucional
+- /servicos/ — descrição dos serviços
+- /contato/ — canais de contato
+- /area-do-cliente/ — portal futuro, ainda indisponível
+- /politica-de-privacidade/ — privacidade e LGPD
+- /politica-de-cookies/ — uso de cookies
+- /termos-de-uso/ — condições de uso
