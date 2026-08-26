@@ -4,7 +4,7 @@ import { ArrowRight, ArrowUpRight, Check } from "@/components/Icons";
 import { JsonLd } from "@/components/JsonLd";
 import { SectionTitle } from "@/components/SectionTitle";
 import { ServiceCard } from "@/components/ServiceCard";
-import { company, whatsappUrl } from "@/config/company.config";
+import { company, sitePath, whatsappUrl } from "@/config/company.config";
 import { services } from "@/data/services";
 
 const steps = [
@@ -22,7 +22,7 @@ const faqs = [
 export default function Home() {
   const serviceSchema = services.map((service) => ({ "@context": "https://schema.org", "@type": "Service", name: service.title, description: service.shortDescription, provider: { "@type": "ProfessionalService", name: company.name } }));
   return <>
-    <section className="hero"><Image className="hero-image" src="/images/hero-inspecao-veicular.png" alt="Visualização técnica de um veículo com comparação entre áreas danificadas e restauradas" fill priority sizes="100vw" /><div className="hero-overlay" /><div className="container hero-content"><span className="hero-kicker"><i /> Engenharia e direito de trânsito</span><h1>Seu veículo merece uma <em>segunda análise.</em></h1><p>Reclassificação de danos e perícia de identificação veicular com atuação técnica, jurídica e orientação transparente.</p><div className="hero-actions"><a className="button" href={whatsappUrl()} target="_blank" rel="noreferrer">Falar com especialista <ArrowUpRight /></a><Link className="text-link" href="/servicos">Conhecer os serviços <ArrowRight /></Link></div><div className="hero-proof"><div><strong>Engenharia</strong><span>Profissionais habilitados</span></div><div><strong>Direito</strong><span>Especialistas em trânsito</span></div><div><strong>Análise</strong><span>Fundamentação técnica</span></div></div></div><div className="hero-index" aria-hidden="true">01 <span /> 04</div></section>
+    <section className="hero"><Image className="hero-image" src={sitePath("/images/hero-inspecao-veicular.png")} alt="Visualização técnica de um veículo com comparação entre áreas danificadas e restauradas" fill priority sizes="100vw" /><div className="hero-overlay" /><div className="container hero-content"><span className="hero-kicker"><i /> Engenharia e direito de trânsito</span><h1>Seu veículo merece uma <em>segunda análise.</em></h1><p>Reclassificação de danos e perícia de identificação veicular com atuação técnica, jurídica e orientação transparente.</p><div className="hero-actions"><a className="button" href={whatsappUrl()} target="_blank" rel="noreferrer">Falar com especialista <ArrowUpRight /></a><Link className="text-link" href="/servicos">Conhecer os serviços <ArrowRight /></Link></div><div className="hero-proof"><div><strong>Engenharia</strong><span>Profissionais habilitados</span></div><div><strong>Direito</strong><span>Especialistas em trânsito</span></div><div><strong>Análise</strong><span>Fundamentação técnica</span></div></div></div><div className="hero-index" aria-hidden="true">01 <span /> 04</div></section>
 
     <section className="trust-strip" aria-label="Compromissos da DESMONTA"><div className="container"><span>Engenharia habilitada</span><i /><span>Direito de trânsito</span><i /><span>Orientação especializada</span><i /><span>Segurança documental</span></div></section>
 

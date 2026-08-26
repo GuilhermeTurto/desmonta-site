@@ -4,7 +4,7 @@ import { CookieBanner } from "@/components/CookieBanner";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { JsonLd } from "@/components/JsonLd";
-import { company } from "@/config/company.config";
+import { company, sitePath } from "@/config/company.config";
 import "./globals.css";
 
 export const viewport: Viewport = { width: "device-width", initialScale: 1, themeColor: "#06111f" };
@@ -15,8 +15,8 @@ export const metadata: Metadata = {
   applicationName: company.name,
   authors: [{ name: company.name }],
   creator: company.name,
-  manifest: "/manifest.webmanifest",
-  icons: { icon: "/favicon.ico" },
+  manifest: sitePath("/manifest.webmanifest"),
+  icons: { icon: sitePath("/favicon.ico") },
   verification: { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION },
 };
 const organization = { "@context": "https://schema.org", "@type": "ProfessionalService", name: company.name, url: company.url, description: company.description, taxID: company.cnpj, email: company.email, telephone: company.phone, sameAs: [company.instagram], address: { "@type": "PostalAddress", streetAddress: company.address.street, addressLocality: company.address.city } };

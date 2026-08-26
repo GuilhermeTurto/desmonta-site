@@ -17,6 +17,7 @@ Fase 1 do site institucional da DESMONTA, construída com Next.js e TypeScript p
 Variáveis disponíveis:
 
 - `NEXT_PUBLIC_SITE_URL`: domínio canônico com protocolo.
+- `NEXT_PUBLIC_BASE_PATH`: subdiretório de publicação, usado no GitHub Pages; deixe vazio em domínio próprio ou desenvolvimento local.
 - `NEXT_PUBLIC_COMPANY_NAME`: nome público da empresa.
 - `NEXT_PUBLIC_WHATSAPP`: número com DDI e DDD, somente dígitos ou formato internacional.
 - `NEXT_PUBLIC_CONTACT_EMAIL`: e-mail público.
@@ -31,6 +32,17 @@ npm run build
 ```
 
 O build gera o diretório `out/`, pronto para hospedagem estática. No Cloudflare Pages, use `npm run build` como comando e `out` como diretório de saída. Variáveis públicas devem ser cadastradas no painel do ambiente de deploy.
+
+## Prévia no GitHub Pages
+
+O workflow `.github/workflows/deploy-pages.yml` publica automaticamente as branches `master` ou `main` em `https://guilhermeturto.github.io/desmonta-site/`.
+
+1. No GitHub, abra `Settings → Pages`.
+2. Em `Source`, selecione `GitHub Actions`.
+3. Faça commit e push dos arquivos pelo GitHub Desktop.
+4. Acompanhe o processo na aba `Actions` do repositório.
+
+O workflow executa lint, gera a exportação estática com o prefixo `/desmonta-site` e publica o diretório `out`.
 
 ## Arquitetura
 

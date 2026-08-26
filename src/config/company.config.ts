@@ -17,6 +17,18 @@ export const company = {
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://desmonta.example",
 } as const;
 
+export const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
+export function sitePath(path: string) {
+  const normalizedPath = path.startsWith("/") ? path : `/${path}`;
+  return `${basePath}${normalizedPath}`;
+}
+
+export function absoluteUrl(path = "/") {
+  const normalizedPath = path === "/" ? "" : path.startsWith("/") ? path : `/${path}`;
+  return `${company.url.replace(/\/$/, "")}${normalizedPath || "/"}`;
+}
+
 export function whatsappUrl(message = "Olá! Gostaria de entender como funciona a reclassificação de danos.") {
   const digits = company.whatsapp.replace(/\D/g, "");
   return digits ? `https://wa.me/${digits}?text=${encodeURIComponent(message)}` : `${company.instagram}`;
