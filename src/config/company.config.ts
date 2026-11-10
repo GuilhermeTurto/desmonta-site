@@ -4,7 +4,7 @@ export const company = {
   description:
     "Empresa técnica especializada em reclassificação de danos e perícia de identificação veicular, com atuação integrada de engenheiros habilitados e advogados especializados em direito de trânsito.",
   cnpj: "41.818.421/0001-01",
-  email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "empresadesmontareclassificacao@gmail.com",
+  email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "desmontareclassificacao@gmail.com",
   phone: "+55 34 9779-0930",
   whatsapp: process.env.NEXT_PUBLIC_WHATSAPP || "+55 34 9779-0930",
   instagram: "https://www.instagram.com/des_monta/",
