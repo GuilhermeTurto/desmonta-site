@@ -1,3 +1,16 @@
+const configuredSiteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL?.trim() ||
+  "https://desmontareclassificacao.com.br";
+
+// Keep every public SEO URL on the canonical HTTPS domain, even if an older
+// Cloudflare build variable still contains the previous HTTP address.
+const canonicalSiteUrl = configuredSiteUrl
+  .replace(
+    /^http:\/\/(?:www\.)?desmontareclassificacao\.com\.br/i,
+    "https://desmontareclassificacao.com.br",
+  )
+  .replace(/\/+$/, "");
+
 export const company = {
   name: process.env.NEXT_PUBLIC_COMPANY_NAME || "DESMONTA",
   legalName: "DESMONTA — Reclassificação de Danos",
@@ -14,7 +27,7 @@ export const company = {
     formatted: "Rua Major Gote, 1022, sala 304, Patos de Minas",
   },
   hours: "Horário de atendimento a confirmar",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://desmonta.example",
+  url: canonicalSiteUrl,
 } as const;
 
 export const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";

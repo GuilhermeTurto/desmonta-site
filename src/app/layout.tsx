@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(company.url),
   title: { default: `${company.name} | Reclassificação de danos`, template: `%s | ${company.name}` },
   description: company.description,
+  alternates: { canonical: company.url },
   applicationName: company.name,
   authors: [{ name: company.name }],
   creator: company.name,
