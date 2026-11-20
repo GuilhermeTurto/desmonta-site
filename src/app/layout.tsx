@@ -4,6 +4,7 @@ import { CookieBanner } from "@/components/CookieBanner";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { JsonLd } from "@/components/JsonLd";
+import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { company, sitePath } from "@/config/company.config";
 import "./globals.css";
 
@@ -21,4 +22,4 @@ export const metadata: Metadata = {
   verification: { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION },
 };
 const organization = { "@context": "https://schema.org", "@type": "ProfessionalService", name: company.name, url: company.url, description: company.description, taxID: company.cnpj, email: company.email, telephone: company.phone, sameAs: [company.instagram], address: { "@type": "PostalAddress", streetAddress: company.address.street, addressLocality: company.address.city } };
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) { return <html lang="pt-BR"><body><a className="skip-link" href="#conteudo">Pular para o conteúdo</a><Header /><main id="conteudo">{children}</main><Footer /><CookieBanner /><Analytics /><JsonLd data={organization} /></body></html>; }
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) { return <html lang="pt-BR"><body><a className="skip-link" href="#conteudo">Pular para o conteúdo</a><Header /><main id="conteudo">{children}</main><Footer /><WhatsAppFloat /><CookieBanner /><Analytics /><JsonLd data={organization} /></body></html>; }
